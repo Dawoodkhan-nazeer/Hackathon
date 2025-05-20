@@ -41,7 +41,7 @@ def closest_color(r, g, b, df):
     min_dist = float('inf')
     closest_name = 'Unknown'
     for _, row in df.iterrows():
-        dist = sqrt((r - row['R'])*2 + (g - row['G'])2 + (b - row['B'])*2)
+        dist = sqrt((r - row['R'])**2 + (g - row['G'])**2 + (b - row['B'])**2)
         if dist < min_dist:
             min_dist = dist
             closest_name = row['color_name']
